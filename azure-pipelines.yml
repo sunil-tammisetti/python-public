@@ -18,6 +18,13 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
+  
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: |
+      print('Hello world 1')
+      print('Hello world 2')
 
 - script: |
     python -m pip install --upgrade pip
